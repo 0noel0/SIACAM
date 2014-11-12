@@ -8,7 +8,7 @@ import model.Listadonecesipaac;
 import model.Ordencompra;
 import model.Paac;
 
-@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2014-11-11T05:43:15")
+@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2014-11-11T22:20:10")
 @StaticMetamodel(Datosinstitucionales.class)
 public class Datosinstitucionales_ { 
 
