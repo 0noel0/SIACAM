@@ -8,15 +8,15 @@ import javax.persistence.metamodel.StaticMetamodel;
 import model.Datosinstitucionales;
 import model.Detallenecesipaac;
 
-@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2014-11-11T22:20:10")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2014-11-22T09:04:49")
 @StaticMetamodel(Listadonecesipaac.class)
 public class Listadonecesipaac_ { 
 
+    public static volatile SingularAttribute<Listadonecesipaac, String> nombreinstitucion;
+    public static volatile CollectionAttribute<Listadonecesipaac, Detallenecesipaac> detallenecesipaacCollection;
     public static volatile SingularAttribute<Listadonecesipaac, String> nombresolicitante;
+    public static volatile SingularAttribute<Listadonecesipaac, Date> fechaelaboracion;
     public static volatile SingularAttribute<Listadonecesipaac, String> ejerciciofiscal;
     public static volatile SingularAttribute<Listadonecesipaac, Datosinstitucionales> codigoinstitucion;
-    public static volatile SingularAttribute<Listadonecesipaac, Date> fechaelaboracion;
-    public static volatile CollectionAttribute<Listadonecesipaac, Detallenecesipaac> detallenecesipaacCollection;
-    public static volatile SingularAttribute<Listadonecesipaac, String> nombreinstitucion;
 
 }

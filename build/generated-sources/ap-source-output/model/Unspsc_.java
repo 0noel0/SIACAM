@@ -8,14 +8,14 @@ import model.Detallenecesipaac;
 import model.Detallepaac;
 import model.Detallesolicitudobra;
 
-@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2014-11-11T22:20:10")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2014-11-22T09:04:49")
 @StaticMetamodel(Unspsc.class)
 public class Unspsc_ { 
 
-    public static volatile SingularAttribute<Unspsc, String> codigo;
-    public static volatile CollectionAttribute<Unspsc, Detallepaac> detallepaacCollection;
     public static volatile SingularAttribute<Unspsc, String> descripcion;
+    public static volatile SingularAttribute<Unspsc, String> codigo;
     public static volatile CollectionAttribute<Unspsc, Detallesolicitudobra> detallesolicitudobraCollection;
+    public static volatile CollectionAttribute<Unspsc, Detallepaac> detallepaacCollection;
     public static volatile CollectionAttribute<Unspsc, Detallenecesipaac> detallenecesipaacCollection;
 
 }

@@ -8,16 +8,16 @@ import javax.persistence.metamodel.StaticMetamodel;
 import model.Datosinstitucionales;
 import model.Detallepaac;
 
-@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2014-11-11T22:20:10")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2014-11-22T09:04:49")
 @StaticMetamodel(Paac.class)
 public class Paac_ { 
 
-    public static volatile CollectionAttribute<Paac, Detallepaac> detallepaacCollection;
-    public static volatile SingularAttribute<Paac, String> ejerciciofiscal;
-    public static volatile SingularAttribute<Paac, Integer> correlativomodificacion;
-    public static volatile SingularAttribute<Paac, Datosinstitucionales> codigoinstitucion;
-    public static volatile SingularAttribute<Paac, Date> fechaelaboracion;
     public static volatile SingularAttribute<Paac, String> nombreinstitucion;
+    public static volatile CollectionAttribute<Paac, Detallepaac> detallepaacCollection;
+    public static volatile SingularAttribute<Paac, Date> fechaelaboracion;
+    public static volatile SingularAttribute<Paac, String> ejerciciofiscal;
     public static volatile SingularAttribute<Paac, Character> version;
+    public static volatile SingularAttribute<Paac, Datosinstitucionales> codigoinstitucion;
+    public static volatile SingularAttribute<Paac, Integer> correlativomodificacion;
 
 }

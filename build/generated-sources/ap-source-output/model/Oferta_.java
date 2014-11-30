@@ -10,15 +10,15 @@ import model.Expedienteproceso;
 import model.Oferente;
 import model.OfertaPK;
 
-@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2014-11-11T22:20:10")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2014-11-22T09:04:49")
 @StaticMetamodel(Oferta.class)
 public class Oferta_ { 
 
+    public static volatile SingularAttribute<Oferta, Oferente> oferente;
+    public static volatile SingularAttribute<Oferta, OfertaPK> ofertaPK;
     public static volatile SingularAttribute<Oferta, BigDecimal> montooferta;
     public static volatile SingularAttribute<Oferta, Expedienteproceso> expedienteproceso;
-    public static volatile SingularAttribute<Oferta, OfertaPK> ofertaPK;
-    public static volatile SingularAttribute<Oferta, Oferente> oferente;
-    public static volatile SingularAttribute<Oferta, String> estadooferta;
     public static volatile CollectionAttribute<Oferta, Detalleoferta> detalleofertaCollection;
+    public static volatile SingularAttribute<Oferta, String> estadooferta;
 
 }

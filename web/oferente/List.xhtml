@@ -26,29 +26,19 @@
 			</div>
                     <hr/>
                         <ul class="nav nav-sidebar">
-                            <li class="active"><a href="#">Overview</a></li>
-                            <li><a href="#">Reports</a></li>
-                            <li><a href="#">Analytics</a></li>
-                            <li><a href="#">Export</a></li>
+                            <li class="active"><a href="http://localhost:8080/SIACAM/faces/oferente/List.xhtml">Lista de Oferentes</a></li>
+                            <li><a href="http://localhost:8080/SIACAM/faces/oferente/Create.xhtml">Agregar Oferente</a></li>
+                            
                         </ul>
-                        <ul class="nav nav-sidebar">
-                            <li><a href="">Nav item</a></li>
-                            <li><a href="">Nav item again</a></li>
-                            <li><a href="">One more nav</a></li>
-                            <li><a href="">Another nav item</a></li>
-                            <li><a href="">More navigation</a></li>
-                        </ul>
-                        <ul class="nav nav-sidebar">
-                            <li><a href="">Nav item again</a></li>
-                            <li><a href="">One more nav</a></li>
-                            <li><a href="">Another nav item</a></li>
-                        </ul>       
+                        
+                             
                 </div>
                  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">    
             <h:form styleClass="jsfcrud_list_form">
                 <h:panelGroup id="messagePanel" layout="block">
                     <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
                 </h:panelGroup>
+                <h2>Lista de Oferentes Registrados por Alcaldia de Mejicanos</h2>
                 <h:outputText escape="false" value="#{bundle.ListOferenteEmpty}" rendered="#{oferenteController.items.rowCount == 0}"/>
                 <h:panelGroup rendered="#{oferenteController.items.rowCount > 0}">
                     <h:outputText value="#{oferenteController.pagination.pageFirstItem + 1}..#{oferenteController.pagination.pageLastItem + 1}/#{oferenteController.pagination.itemsCount}"/>&nbsp;
@@ -99,21 +89,28 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="&nbsp;"/>
+                                <h:outputText value="Opciones"/>
                             </f:facet>
-                            <h:commandLink action="#{oferenteController.prepareView}" value="#{bundle.ListOferenteViewLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{oferenteController.prepareEdit}" value="#{bundle.ListOferenteEditLink}"/>
-                            <h:outputText value=" "/>
-                            <h:commandLink action="#{oferenteController.destroy}" value="#{bundle.ListOferenteDestroyLink}"/>
+                            
+                                <button type="button" class="btn btn-default" >
+                                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<h:commandLink action="#{oferenteController.prepareView}" value="Ver"/>
+                                                                                           <h:outputText value=" "/>
+                                </button>
+                                <button type="button" class="btn btn-default" >
+                                    <span class="glyphicon glyphicon-pencil"></span>&nbsp;<h:commandLink action="#{oferenteController.prepareEdit}" value="Editar"/>
+                                                                                           <h:outputText value=" "/>
+                                </button>
+                                <button type="button" class="btn btn-default" >
+                                    <span class="glyphicon glyphicon-remove-sign"></span>&nbsp;<h:commandLink action="#{oferenteController.destroy}" value="Eliminar"/>
+                                </button>
+                            
                         </h:column>
                     </h:dataTable>
                 </h:panelGroup>
                 <br />
-                <h:commandLink action="#{oferenteController.prepareCreate}" value="#{bundle.ListOferenteCreateLink}"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ListOferenteIndexLink}"/>
+                
             </h:form>
                 </div>
             </div>

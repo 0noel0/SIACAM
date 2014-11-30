@@ -9,18 +9,18 @@ import model.Detalleficharetirobases;
 import model.Oferente;
 import model.Oferta;
 
-@Generated(value="EclipseLink-2.5.0.v20130507-rNA", date="2014-11-11T22:20:10")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2014-11-22T09:04:49")
 @StaticMetamodel(Expedienteproceso.class)
 public class Expedienteproceso_ { 
 
     public static volatile SingularAttribute<Expedienteproceso, String> denominacionproceso;
-    public static volatile CollectionAttribute<Expedienteproceso, Adenda> adendaCollection;
-    public static volatile SingularAttribute<Expedienteproceso, String> tipoproceso;
     public static volatile SingularAttribute<Expedienteproceso, String> responsableproceso;
-    public static volatile SingularAttribute<Expedienteproceso, String> estadoproceso;
-    public static volatile SingularAttribute<Expedienteproceso, String> codigoproceso;
-    public static volatile SingularAttribute<Expedienteproceso, Oferente> nombreadjudicatario;
     public static volatile CollectionAttribute<Expedienteproceso, Detalleficharetirobases> detalleficharetirobasesCollection;
+    public static volatile SingularAttribute<Expedienteproceso, String> tipoproceso;
+    public static volatile SingularAttribute<Expedienteproceso, String> estadoproceso;
+    public static volatile SingularAttribute<Expedienteproceso, Oferente> nombreadjudicatario;
     public static volatile CollectionAttribute<Expedienteproceso, Oferta> ofertaCollection;
+    public static volatile CollectionAttribute<Expedienteproceso, Adenda> adendaCollection;
+    public static volatile SingularAttribute<Expedienteproceso, String> codigoproceso;
 
 }
