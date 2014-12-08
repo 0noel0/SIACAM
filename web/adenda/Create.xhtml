@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">   
+        
+    <ui:composition template="/template.xhtml">
+    <ui:define name="body">
+            <ui:include src="../header.xhtml" />
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                        <div>
+			<img src="../resources/images/logo.png"/>
+			</div>
+                    <hr/>
+                        <ul class="nav nav-sidebar">
+                            <li><a href="http://localhost:8080/SIACAM/faces/oferente/List.xhtml">Lista de Oferentes</a></li>
+                            <li class="active"><a href="http://localhost:8080/SIACAM/faces/oferente/Create.xhtml">Agregar Oferente</a></li>
+                            
+                        </ul>
+                        
+                             
+                </div>
+                <div class="col-sm-9">
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateAdendaLabel_adendaPK_nocorrelativo}" for="adendaPK_nocorrelativo" />
+                    <h:inputText id="adendaPK_nocorrelativo" value="#{adendaController.selected.adendaPK.nocorrelativo}" title="#{bundle.CreateAdendaTitle_adendaPK_nocorrelativo}" required="true" requiredMessage="#{bundle.CreateAdendaRequiredMessage_adendaPK_nocorrelativo}"/>
+                    <h:outputLabel value="#{bundle.CreateAdendaLabel_textobases}" for="textobases" />
+                    <p:inputMask id="textobases" value="#{adendaController.selected.textobases}" title="#{bundle.CreateAdendaTitle_textobases}" mask="(999) 9999-9999" />
+                    <h:outputLabel value="#{bundle.CreateAdendaLabel_operacion}" for="operacion" />
+                    <p:calendar id="operacion" value="#{adendaController.selected.operacion}" title="#{bundle.CreateAdendaTitle_operacion}"  showOn="button"/>
+                    <h:outputLabel value="#{bundle.CreateAdendaLabel_expedienteproceso}" for="expedienteproceso" />
+                    <h:selectOneMenu id="expedienteproceso" value="#{adendaController.selected.expedienteproceso}" title="#{bundle.CreateAdendaTitle_expedienteproceso}" required="true" requiredMessage="#{bundle.CreateAdendaRequiredMessage_expedienteproceso}">
+                        <f:selectItems value="#{expedienteprocesoController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{adendaController.create}" value="#{bundle.CreateAdendaSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{adendaController.prepareList}" value="#{bundle.CreateAdendaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateAdendaIndexLink}"/>
+            </h:form>
+          </div>
+           </div>     
+        </ui:define>
+    </ui:composition>
+
+</html>
